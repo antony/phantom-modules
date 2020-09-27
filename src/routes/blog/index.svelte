@@ -7,6 +7,10 @@
 </script>
 
 <script>
+	import { TextArea } from '@beyonk/fields'
+	import { writable } from 'svelte/store'
+	import { fade } from 'svelte/transition'
+
 	export let posts;
 </script>
 
@@ -21,7 +25,9 @@
 	<title>Blog</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<h1 in:fade>Recent posts</h1>
+
+<TextArea validate={() => {}} validity={writable({})} />
 
 <ul>
 	{#each posts as post}

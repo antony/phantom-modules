@@ -1,4 +1,8 @@
 <script>
+
+import { CheckIcon, XIcon } from 'svelte-feather-icons'
+import { fade } from 'svelte/transition'
+
 	export let segment;
 </script>
 
@@ -48,8 +52,11 @@
 	}
 </style>
 
+<CheckIcon />
+<XIcon />
+
 <nav>
-	<ul>
+	<ul in:fade>
 		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
 

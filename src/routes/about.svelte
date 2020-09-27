@@ -12,11 +12,13 @@
 	}
 </style>
 
-
 <TextField validate={() => {}} validity={writable({})} />
-<TextArea validate={() => {}} validity={writable({})} />
+
+	<CheckIcon />
+
 
 <script>
 	import { writable } from 'svelte/store'
-	import { TextField, TextArea } from '@beyonk/fields'
+	import { TextField } from '@beyonk/fields'
+	import { CheckIcon } from 'svelte-feather-icons'
 </script>

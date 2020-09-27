@@ -43,12 +43,17 @@
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<Trash2Icon />
+
+<p transition:fade><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
 
 <TextField validate={() => {}} validity={writable({})} />
 <TextArea validate={() => {}} validity={writable({})} />
 
+	<CheckIcon />
 <script>
 	import { writable } from 'svelte/store'
 	import { TextField, TextArea } from '@beyonk/fields'
+	import { CheckIcon, Trash2Icon } from 'svelte-feather-icons'
+	import { fade } from 'svelte/transition'
 </script>
